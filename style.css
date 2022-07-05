@@ -1,0 +1,314 @@
+
+body
+{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(to bottom right,  #EA5F8E 50%, #E25B88 50%);
+    display:flex;
+    justify-content: center;
+    margin:2%;
+    font-family: roboto;
+}
+
+/* main box starts here */
+#main_box
+{
+    background-color: #3D434B;
+    min-height: 90vh;
+    width: 75vh;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* date_box starts here */
+#date_box
+{
+    font-family: roboto;
+    margin-top: 6%;
+    margin-bottom: 10%;
+    color:#DCE0E3  ;
+    text-align: center;
+}
+.day
+{
+    font-size: 40px;
+    margin-bottom: 3%;
+
+}
+.date
+{
+    color:#9A9FA7 ;
+}
+
+#icon_haeding i
+{
+  margin-top: 6%;
+  margin-left: 46%;
+  font-size: xx-large;
+  color:#E25B88;
+
+}
+
+/* date_box ends here */
+
+/* input field starts here */
+#input_field
+{
+    margin:0% 8%;
+    background-color: #1F2937;
+    display: flex;
+    align-items: center;
+    padding: 0% 2%; 
+    height: 40px;
+    border-radius: 5px;
+}
+#pinned_elements
+{
+  display: none;
+}
+
+#line
+{
+  margin-top: 0;
+  display: none;
+  height:1px; 
+  width:80%; 
+  border-width:0;
+  background-color: #1F2937;
+}
+
+.pinned_object i
+{
+  color: #EA5F8E;
+  font-size: small;
+}
+.pinned_object
+{
+  display: none;
+}
+
+
+#input_field input
+{
+    color:#DCE0E3;
+    outline: none;
+    background: none;
+    border: none;
+    flex: 1 1 0%;
+}
+
+#input_field input::placeholder
+{
+    color: #9A9FA7;
+}
+#input_field i
+{
+    margin: 1.5%;
+    color: #9A9FA7 ;
+    
+}
+#item_list
+{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    margin-top:3%;
+    row-gap: 6px;
+}
+.item
+{
+    display: flex;
+    column-gap: 10px;
+    margin: 0;
+    
+}
+p
+{
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.item_text_box
+{
+  display: flex;
+  flex-direction: column;
+  flex:1 0 0%;
+  flex-wrap: 1;
+  margin-bottom: 5px ;
+}
+
+
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #1F2937 ;
+    box-shadow: 0px 8px 16px 0px rgba(27, 27, 27, 0.2);
+  }
+  
+  
+
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+.item_text
+{
+    cursor: pointer;
+    font-size: 15px;
+    color: #DCE0E3;
+    user-select: none; /* Standard */
+
+}
+.item_memo
+{
+    font-size: 12px;
+    color:#9A9FA7;
+    width: 100%;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+.item_memo:not(:read-only)
+{
+  color: grey;
+  
+}
+
+.fa-solid 
+{
+    color:#DCE0E3;
+}
+
+  
+  .dropdown {
+    position: relative;
+    /* display: inline-block; */
+    float: right;
+    margin-left: auto;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#1F2937     ;
+    box-shadow: 0px 8px 16px 0px rgba(27, 27, 27, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+    right: 0;
+  }
+  .dropdown-content div {
+    color: #9A9FA7  ;
+    padding: 8px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .dropdown-content div:hover
+  {
+    opacity: 0.8;
+
+  }
+  .dropdown-content div i {
+    color: #9A9FA7;
+    font-size: 14px;
+    margin-right: 7px;
+  }
+ 
+  
+
+  
+  /* .dropdown:hover .dropdown-content {display: block;} */
+  
+ 
+
+/* input field ends here */
+
+
+
+
+/* main box ends here */
+
+/* media queries */
+@media (max-width:540px) 
+{
+  body
+  {  
+      margin:8%;
+  }
+  #icon_haeding i
+  {
+    font-size: large;
+
+  }
+  .day
+  {
+      font-size: 25px;  
+  }
+  #input_field
+  {
+      margin:0% 5%;
+  }
+  .item_text
+  {
+    font-size: 13px;
+  
+  }
+  .dropdown-content div {
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+
+     
+}
