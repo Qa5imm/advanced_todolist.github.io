@@ -27,6 +27,7 @@ date_box_el.appendChild(date_el)
 const item_list_el= document.getElementById("item_list")
 const pinned_elements_el= document.getElementById("pinned_elements")
 const line_el= document.getElementById("line")
+
 function addinput()
 {
     
@@ -117,6 +118,7 @@ function addinput()
 
     item_list_el.appendChild(item_el)
     
+    input_field_text_el.value=""
 
     delete_el.addEventListener("click", ()=>
     {
