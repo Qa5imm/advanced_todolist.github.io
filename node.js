@@ -242,7 +242,7 @@ function addinput(localcheck, memo="", pin=false, mar= false){
         {
             temp_val= item_el.children[2].firstChild.innerText
             all_items.forEach((item)=>{
-                item.val = item.val.replace(/\s/g, '');
+                item.val.trim()
                 if(item.val === temp_val){
                     if(item.pin=== false){
                         item.pin= true
@@ -255,7 +255,6 @@ function addinput(localcheck, memo="", pin=false, mar= false){
                     
                 }
             })
-            console.log(all_items)
             pin_el.innerHTML= `<i class="fa-solid fa-thumbtack"></i>`+"Pin"
             pinned_elements_el.removeChild(item_el)
             pinned_object_el.style.display="none"
@@ -269,7 +268,7 @@ function addinput(localcheck, memo="", pin=false, mar= false){
             temp_val= item_el.children[2].firstChild.innerText
             console.log("temp value", temp_val)
             all_items.forEach((item)=>{
-                item.val = item.val.replace(/\s/g, '');
+                item.val.trim()
                 if(item.val === temp_val){
                     console.log("item", item)
                     if(item.pin === false){
@@ -290,8 +289,6 @@ function addinput(localcheck, memo="", pin=false, mar= false){
             pinned_elements_el.appendChild(item_el)
             pin_el.innerHTML= `<i class="fa-solid fa-thumbtack"></i>`+"remove pin"
             location.reload()
-
-
         }
         
         
