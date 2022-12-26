@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+ 
+<head>
+    <title>
+        How to convert JSON string to array
+        of JSON objects using JavaScript?
+    </title>
+</head>
+ 
+<body style = "text-align:center;">
+     
+    <h1 style = "color:green;" >
+        GeeksForGeeks
+    </h1>
+     
+    <p id = "GFG_UP"></p>
+     
+    <button onclick = "myGFG()">
+        Click Here
+    </button>
+     
+    <p id = "GFG_DOWN"></p>
+     
+    <script>
+        var up = document.getElementById("GFG_UP");
+         
+        var JS_Obj =
+        '{"prop_1":"val_1", "prop_2":"val_2", "prop_3" : "val_3"}';
+         
+        up.innerHTML = "JSON string - '" + JS_Obj + "'";
+         
+        var down = document.getElementById("GFG_DOWN");
+         
+        function myGFG() {
+            var obj = JSON.parse(JS_Obj);
+            var res = [];
+             
+            for(var i in obj)
+                res.push(obj[i]);
+             
+            down.innerHTML = "Array of values - ["
+                            + res + "]";
+        }
+    </script>
+</body>
+ 
+</html
