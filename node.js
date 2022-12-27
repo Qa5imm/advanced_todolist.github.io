@@ -56,6 +56,7 @@ if(itemSet){
 function addinput(localcheck, memo="", pin=false, mar= false){    
     const input_field_text_el= document.getElementById("input_field_text")
     input= input_field_text_el.value
+    input.trim()
     if(localcheck===0){                      //checking whether its local storage input or newly entered
         temp_dict={"val": input, "pin" : false, "mar": false, "memo":""}
         all_items.push(temp_dict)    
